@@ -13,6 +13,8 @@
 		04B347022284826200EF42E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B347012284826200EF42E2 /* Assets.xcassets */; };
 		04B347052284826200EF42E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B347032284826200EF42E2 /* LaunchScreen.storyboard */; };
 		04B3470D2284839C00EF42E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04B3470C2284839C00EF42E2 /* GoogleService-Info.plist */; };
+		04B3470F2286F9A400EF42E2 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3470E2286F9A400EF42E2 /* SnapsViewController.swift */; };
+		04B3471122889E8A00EF42E2 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3471022889E8A00EF42E2 /* PictureViewController.swift */; };
 		DA945ED27FB0909DC3FE9C00 /* Pods_Snapchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8953CF04741CCE8333A6A9 /* Pods_Snapchat.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		04B347042284826200EF42E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B347062284826200EF42E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B3470C2284839C00EF42E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04B3470E2286F9A400EF42E2 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		04B3471022889E8A00EF42E2 /* PictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		0C8953CF04741CCE8333A6A9 /* Pods_Snapchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5658B56D86FEF87F1D5572F6 /* Pods-Snapchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.release.xcconfig"; path = "Target Support Files/Pods-Snapchat/Pods-Snapchat.release.xcconfig"; sourceTree = "<group>"; };
 		E8F04477E426B819F27A11C0 /* Pods-Snapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.debug.xcconfig"; path = "Target Support Files/Pods-Snapchat/Pods-Snapchat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 			children = (
 				04B346FA2284825F00EF42E2 /* AppDelegate.swift */,
 				04B346FC2284825F00EF42E2 /* SignInViewController.swift */,
+				04B3470E2286F9A400EF42E2 /* SnapsViewController.swift */,
+				04B3471022889E8A00EF42E2 /* PictureViewController.swift */,
 				04B346FE2284825F00EF42E2 /* Main.storyboard */,
 				04B347012284826200EF42E2 /* Assets.xcassets */,
 				04B347032284826200EF42E2 /* LaunchScreen.storyboard */,
@@ -170,14 +176,18 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Snapchat/Pods-Snapchat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B3470F2286F9A400EF42E2 /* SnapsViewController.swift in Sources */,
+				04B3471122889E8A00EF42E2 /* PictureViewController.swift in Sources */,
 				04B346FD2284825F00EF42E2 /* SignInViewController.swift in Sources */,
 				04B346FB2284825F00EF42E2 /* AppDelegate.swift in Sources */,
 			);

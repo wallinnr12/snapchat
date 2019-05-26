@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInViewController: UIViewController {
     
@@ -21,7 +22,31 @@ class SignInViewController: UIViewController {
     }
 
     @IBAction func signInTapped(_ sender: Any) {
+        
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            print("We tried to sign in")
+            if error != nil {
+                print("Hey we have an error:\(error)")
+                
+                Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
+                    print("We tried to create a user")
+                    
+                        if error != nil {
+                            print("Hey we have an error:\(error)")
+                        } else {
+                            print("Created User successfully!")
+                            self.performSegue(withIdentifier: "signInSegue", sender: nil)
+                            
+                            
+                    }
+                })
+            } else {
+                print("Signed in Successfully")
+                self.performSegue(withIdentifier: "signInSegue", sender: nil)
+        }
+        
+        }
+
     }
-    
 }
 
